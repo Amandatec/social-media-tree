@@ -11,6 +11,7 @@
   --link-color: rgba(214, 10, 214, 0.493);
   --border-link:  rgb(187, 153, 221);
   --img-border: rgb(187, 153, 221);
+  --filter-color: rgb(54, 177, 161);
 }
 
 #dark,
@@ -20,6 +21,7 @@
   --link-color: rgba(214, 10, 214, 0.493);
   --border-link:  rgb(187, 153, 221);
   --img-border: rgb(94, 30, 159);
+  --filter-color: rgb(54, 177, 161);
 }
 
 #pink,
@@ -29,6 +31,7 @@
   --link-color: rgb(187, 39, 160);
   --border-link: rgb(220, 153, 221);
   --img-border: rgb(220, 153, 221);
+  --filter-color: rgb(221, 18, 18);
 }
 
 body{ 
@@ -46,9 +49,15 @@ section {
   margin-top: 20px;
 }
 
+@media(min-width: 768px) {
+  section {
+    margin-top: 80px;
+   }
+}
+
 @media (max-width: 500px) {
  section {
-  margin-top: 100px;
+  margin-top: 80px;
  }   
 }
 
@@ -66,10 +75,12 @@ img {
   border-radius: 50%;
   border:var(--img-border) solid 2px;
   padding: 6px;
+
 }
 
 #profile-photo {
-  width: 8rem
+  width: 8rem;
+  filter: drop-shadow(0 0 15px var(--filter-color));
 }
 
 main a {
@@ -134,7 +145,7 @@ input[type="radio"]:checked {
   --link-color: rgba(214, 10, 214, 0.493);
   --border-link:  rgb(187, 153, 221);
   --img-border: rgb(94, 30, 159);
-
+  --filter-color: rgb(54, 177, 161);
 }
 
 #pink {
@@ -143,5 +154,5 @@ input[type="radio"]:checked {
   --link-color: rgb(240, 10, 198);
   --border-link: rgb(220, 153, 221);
   --img-border: rgb(220, 153, 221);
+  --filter-color: rgb(221, 18, 18);
 }
-
