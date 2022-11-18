@@ -1,10 +1,41 @@
-body{
+*{
   margin: 0;
   padding: 0;
+}
+
+#dark,
+:root {
   font-size: 62,50%;
-  background-color: rgb(48, 47, 61);
+  --tt-color: rgba(12, 247, 211, 0.842);
+  --background-color:  rgb(48, 47, 61);
+  --link-color: rgba(214, 10, 214, 0.493);
+  --border-link:  rgb(187, 153, 221);
+  --img-border: rgb(187, 153, 221);
+}
+
+#dark,
+:root:has(#dark:checked) {
+  --background-color:  rgb(48, 47, 61);
+  --tt-color: rgba(12, 247, 211, 0.842);
+  --link-color: rgba(214, 10, 214, 0.493);
+  --border-link:  rgb(187, 153, 221);
+  --img-border: rgb(94, 30, 159);
+}
+
+#pink,
+:root:has(#pink:checked) {
+  --background-color:rgb(171, 105, 170);
+  --tt-color: rgb(190, 28, 174);
+  --link-color: rgb(187, 39, 160);
+  --border-link: rgb(220, 153, 221);
+  --img-border: rgb(220, 153, 221);
+}
+
+body{ 
+  font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
-  color: rgba(12, 247, 211, 0.842);
+  background-color: var(--background-color);
+  color: var(--tt-color);
 }
 
 section {
@@ -33,7 +64,7 @@ header {
 
 img {
   border-radius: 50%;
-  border:rgb(187, 153, 221) solid 2px;
+  border:var(--img-border) solid 2px;
   padding: 6px;
 }
 
@@ -44,14 +75,14 @@ img {
 main a {
   display: flex;
   justify-content: center;
-  border: rgb(187, 153, 221) solid 1px;
+  border: var(--border-link) solid 1px;
   margin-bottom: 15px;
   width: 210px;
   height: 25px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 1.2rem;
-  color: rgba(214, 10, 214, 0.493);
+  color: var(--link-color);
   padding: 10px;
 }
 
@@ -72,3 +103,44 @@ footer a:hover {
   transition:  2s all;
   padding: 10px;
 }
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 0.2rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 2px solid var(--input-color);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--input-color);
+}
+
+#dark {
+  --input-color: rgb(21, 22, 21);
+  --tt-color: rgb(61, 64, 61);
+  --link-color: rgba(214, 10, 214, 0.493);
+  --border-link:  rgb(187, 153, 221);
+  --img-border: rgb(94, 30, 159);
+
+}
+
+#pink {
+  --input-color: rgb(139, 13, 137);
+  --tt-color: rgb(190, 28, 174);
+  --link-color: rgb(240, 10, 198);
+  --border-link: rgb(220, 153, 221);
+  --img-border: rgb(220, 153, 221);
+}
+
