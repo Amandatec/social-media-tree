@@ -35,7 +35,7 @@
 }
 
 body{ 
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-color);
   color: var(--tt-color);
@@ -79,7 +79,7 @@ img {
 }
 
 #profile-photo {
-  width: 8rem;
+  width:7rem;
   filter: drop-shadow(0 0 15px var(--filter-color));
 }
 
@@ -97,7 +97,7 @@ main a {
   padding: 10px;
 }
 
-main a:hover {
+ main a:hover  {
   background-color: rgb(91, 90, 114);
   transition: all 2s;
   color: rgba(12, 247, 211, 0.842);
